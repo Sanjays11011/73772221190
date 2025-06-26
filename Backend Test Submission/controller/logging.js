@@ -31,3 +31,7 @@ exports.login = async(req,res) => {
     const token = jwt.sign({ user }, SECRET_KEY,{ credentials : '30m'});
     res.status(200).json({ token });
 }
+
+exports.sample = (req, res) => {
+    res.status(200).json({ message: 'Sample route' });
+}
